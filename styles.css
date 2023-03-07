@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+:root{
+
+    --main-bg-clr:  hsl(233, 47%, 7%);
+    --card-bg-clr: hsl(244, 38%, 16%);
+    --accent-clr: hsl(277, 64%, 61%);
+
+    --white-clr:  hsl(0, 0%, 100%);
+    --main-p-clr: hsla(0, 0%, 100%, 0.75);
+    --stat-h-clr:  hsla(0, 0%, 100%, 0.6);
+
+    --ff-inter: 'Inter', sans-serif;
+    --ff-lexend-deca: 'Lexend Deca', sans-serif;
+
+}
+
+body{
+    background-color: var(--main-bg-clr);
+    
+}
+
+.card-container{
+    
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   min-width: 100vw;
+   min-height: 100vh; 
+   
+}
+
+.card{
+    max-width: 300px;
+    background-color: var(--card-bg-clr);
+    border-radius: .5rem;
+    
+   
+}
+
+.card-picture{
+    background: url(image-header-mobile.jpg);
+    height: 200px;
+    background-size: cover;
+    border-radius: .5rem .5rem 0 0;
+    mix-blend-mode: soft-light;
+}
+
+
+
+h1,
+p,
+ul{
+    text-align: center;
+}
+
+h1{
+    color: var(--white-clr);
+    font-family: var(--ff-inter);
+    margin: 2.5rem 0 1rem;
+    font-size: 1.6rem;
+}
+
+span{
+    color: var(--accent-clr);
+}
+
+p{
+    color: var(--main-p-clr);
+    word-spacing: .1rem;
+    padding-top: .6rem ;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+}
+
+ul {
+ color: var(--main-p-clr);
+ margin-top: 2rem;  
+ margin-bottom: 1rem;
+}
+
+
+.white{
+    color: var(--white-clr);
+    font-family: var(--ff-lexend-deca);
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+@media (min-width: 800px) {
+    .card{
+        display: flex;
+        flex-direction: row-reverse;
+        min-width: 900px;
+        height: 350px;
+        gap: 30px;
+       
+    }
+    .card-picture{
+        background: url(image-header-desktop.jpg);
+        width: 850px;
+        height: 350px;
+        background-repeat: no-repeat;
+        border-radius: 0 .5rem .5rem 0 ;
+
+    }
+
+    h1
+    {
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+    p{
+      padding: 0;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    .flex-group{
+        display: flex;
+        justify-content: space-around;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 1rem;
+
+      
+    }
+}
